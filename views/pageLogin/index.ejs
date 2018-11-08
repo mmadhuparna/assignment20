@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+    <!--include header part-->
+    <% include ../shared/head %>
+
+    <!--applying internal styles-->
+    <style>
+       
+        .bg{
+            padding-top: 20px;
+           margin-top: 20%;
+           text-align: center;
+           background-color: black;
+           opacity: 0.7;
+           padding-bottom: 40px;
+           
+        }
+        h3{
+            color: rgb(247, 245, 245);
+        }
+    </style>
+</head>
+
+<body >
+    
+    <div class="container">
+        <div class="row">
+            <div class="bg col-md-8 col-md-offset-2">
+                <h3>Welcome to <%= title %></h3>
+                <a href="/login" class="btn btn-default">Login</a>
+                <a href="/register" class="btn btn-primary">Signup</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

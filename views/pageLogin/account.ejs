@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <!--include header part-->
+    <% include ../shared/head %>
+
+    <!--applying internal styles-->
+    <style>
+       
+        .page-header{
+            color: rgb(245, 239, 239);
+        }
+        label{
+            
+            color: rgb(245, 243, 243);
+        }
+        .bg{
+            
+            margin-top: 10%;
+            background-color: black;
+            opacity: 0.8;
+        }
+        
+        .btn-primary{
+            letter-spacing: 1px;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+        }
+        span{
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform:capitalize;
+            color: rgb(21, 165, 136);
+        }
+    </style>
+</head>
+
+<body >
+    <!--main body starts-->
+    <div class="container">
+            
+        <div class="row">
+            <div class="bg col-md-4 col-md-offset-4">
+                <span style="color: rgb(21, 165, 136);">Hello!</span>
+                <span style="color:rgb(21, 165, 136)" ><%= user.username %></span>
+                <h3 style="color: rgb(21, 165, 136)">You are successfully logged in</h3>
+                <div class="page-header">
+                    <h3>Your login Details</h3>
+                </div>
+                                
+                <form id="" method="POST" >
+                    <div class="form-group">
+                        <label >ID:&nbsp</label>
+                        <span ><%= user.id %></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label >Username:&nbsp</label>
+                         <span ><%= user.username %></span>
+                    </div>
+                        
+                    <div class="form-group">
+                        <label >First Name:&nbsp</label>
+                        <span ><%= user.firstname %></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label >Last Name:&nbsp</label>
+                        <span ><%= user.lastname %></span>
+                    </div>
+                        
+                    <div class="form-group">
+                        <label >Email:&nbsp</label>
+                        <span style="text-transform: lowercase"><%= user.email %></span>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="/" class="btn btn-primary">logout</a>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>                   
+</body>
+</html>
